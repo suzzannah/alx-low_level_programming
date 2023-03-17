@@ -8,20 +8,20 @@
  */
 int main(void)
 {
-int m, n;
+int x, y;
 
-for (m = 0; m < 100; m++)
+for (x = 0; x < 100; x++)
 {
-for (n = 0; n < 100; n++)
+for (y = 0; y < 100; y++)
 {
-if (m < n)
+if (x < y)
 {
-putchar((m / 10) + 48);
-putchar((m % 10) + 48);
+putchar((x / 10) + 48);
+putchar((x % 10) + 48);
 putchar(' ');
-putchar((n / 10) + 48);
-putchar((n % 10) + 48);
-if (m != 98 || n != 99)
+putchar((y / 10) + 48);
+putchar((y % 10) + 48);
+if (x != 98 || y != 99)
 {
 putchar(',');
 putchar(' ');
@@ -31,4 +31,4 @@ putchar(' ');
 }
 putchar('\n');
 return (0);
-}i
+}
