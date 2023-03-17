@@ -3,7 +3,9 @@
 #include <stdio.h>
 
 /**
- * main -  A program that  assign a random number to the variable n each time it is executed. Prints a random number and states whether
+ * main -  A program that  assign a random number to the variable n
+ *  each time it is executed.
+ * Prints a random number and states whether
  *        it is positive, negative, or zero.
  *
  * Return: Always 0.
