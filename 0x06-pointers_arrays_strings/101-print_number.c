@@ -3,20 +3,19 @@
 /**
   * print_number - Prints any integer with putchar
   * @n: Number to prints
-  *
   * Return: Nothing
   */
-void print_number(int m)
+void print_number(int n)
 {
 	unsigned int x;
 
-	if ( < 0)
+	if (n < 0)
 	{
 		_putchar('-');
-		m *= -1;
+		n *= -1;
 	}
 
-	x = m;
+	x = n;
 
 	if (x / 10)
 		print_number(x / 10);
