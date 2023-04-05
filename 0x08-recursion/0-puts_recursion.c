@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * _puts_recursion - puts()
- * @s input
+ * @s: input
  * Return 0 (success) always
  */
 
