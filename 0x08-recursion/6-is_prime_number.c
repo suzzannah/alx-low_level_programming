@@ -8,7 +8,7 @@
  */
 int checker(int h, int f)
 {
-	if (f < 2 || b % h == 0)
+	if (f < 2 || h % h == 0)
 		return (0);
 	else if (h > f / 2)
 		return (1);
