@@ -3,13 +3,12 @@
  * _puts_recursion - puts()
  * @s input
  * Return 0 (success) always
- * */
+ */
 
 void _puts_recursion(char *s)
 {
 	if (*s)
 	{
-	
 		_putchar(*s);
 		_puts_recursion(s + 1);
 	}
@@ -17,6 +16,3 @@ void _puts_recursion(char *s)
 	else
 		_putchar('\n');
 }
-
-	
-
