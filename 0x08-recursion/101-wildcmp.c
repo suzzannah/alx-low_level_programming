@@ -1,10 +1,12 @@
 #include "main.h"
 
 /**
- * wildcmp - Compares the  strings
- * @s1:pointer to string
- * @s2:pointer to string
- * Return: 0
+ * str_checker - check if two strings are identical.
+ * @s1: string_1 base address.
+ * @s2: string_2 base address.
+ * @i: left index.
+ * @j: special index. (joker)
+ * Return: 1 if s is palindrome, 0 otherwise.
  */
 int str_checker(char *s1, char *s2, int i, int j)
 {
@@ -17,13 +19,12 @@ int str_checker(char *s1, char *s2, int i, int j)
 	if (s2[j] == '*')
 		return (str_checker(s1, s2, i + 1, j) || str_checker(s1, s2, i, j + 1));
 	return (0);
-
 }
 /**
- * wildcmp - check whether strings considered identical
- * @s1: address for string.
- * @s2: address for string.
- * code by sue
+ * wildcmp - check if strings could be considered identical
+ * @s1: base address for string.
+ * @s2: base address for string.
+ *
  * Return: 1 if are considered identical.
  */
 int wildcmp(char *s1, char *s2)
