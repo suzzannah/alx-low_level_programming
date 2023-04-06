@@ -17,7 +17,15 @@ int str_checker(char *s1, char *s2, int i, int j)
 	if (s2[j] == '*')
 		return (str_checker(s1, s2, i + 1, j) || str_checker(s1, s2, i, j + 1));
 	return (0);
+
 }
+/**
+ * wildcmp - check whether strings considered identical
+ * @s1: address for string.
+ * @s2: address for string.
+ * code by sue
+ * Return: 1 if are considered identical.
+ */
 int wildcmp(char *s1, char *s2)
 {
 	return (str_checker(s1, s2, 0, 0));
