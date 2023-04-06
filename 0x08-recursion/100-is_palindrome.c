@@ -1,9 +1,8 @@
 #include "main.h"
 /**
- * _strlen_recursion - Prints length of  string.
- * @s: this is the string to be printed
- * code by sue
- * Return: length of string
+ * _strlen_recursion - Prints the length of a string.
+ * @s: the string to be printed
+ * Return: the length of string
  */
 int _strlen_recursion(char *s)
 {
@@ -14,25 +13,25 @@ int _strlen_recursion(char *s)
 /**
  * pal_checker - check if s is palindrome.
  * @s: string base address.
- * @k:is the  left index.
- * @j: is the index.
- * Return: 1 if s is a palindrome, 0 otherwise.
+ * @i: left index.
+ * @j: rigth index.
+ * Return: 1 if s is palindrome, 0 otherwise.
  */
-int pali_checker(char *s, int k, int j)
+int pal_checker(char *s, int i, int j)
 {
-	if (s[k] == s[j])
-		if (k > j / 2)
+	if (s[i] == s[j])
+		if (i > j / 2)
 			return (1);
 		else
-			return (pali_checker(s, k + 1, j - 1));
+			return (pal_checker(s, i + 1, j - 1));
 	else
 		return (0);
 }
 /**
- * is_palindrome - checks if it  is a palindrome
- * @s: base for string.
- * code by sue
- * Return: 1 if n when prime, 0 otherwise.
+ * is_palindrome - check if s is palindrome
+ * @s: base address for string.
+ *
+ * Return: 1 if n is prime, 0 otherwise.
  */
 int is_palindrome(char *s)
 {
