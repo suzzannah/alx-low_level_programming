@@ -32,7 +32,7 @@ int main(int argc, char **argv)
 			{
 				if (total >= cents[i])
 				{
-					num+= total / cents[i];
+					num += total / cents[i];
 					total = total % cents[i];
 				}
 			}
