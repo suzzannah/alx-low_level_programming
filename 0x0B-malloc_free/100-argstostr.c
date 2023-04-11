@@ -2,23 +2,23 @@
 #include <stdlib.h>
 
 /**
- * argstostr - concatenates all the arguments of your program.
- * @ac: arguments count
- * @av: arguments vector
- *
+ * argstostr - this concatenates all the program arguments.
+ * @ac:the arguments count
+ * @av:the  arguments vector
+ * code by sue
  * Return: a pointer to a new string, or NULL if it fails
  */
 char *argstostr(int ac, char **av)
 {
 	char *str, *s;
-	int i, j, k, len = 0;
+	int m, j, k, len = 0;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
 
-	for (i = 0; i < ac; i++)
+	for (m = 0; m < ac; m++)
 	{
-		s = av[i];
+		s = av[m];
 		j = 0;
 
 		while (s[j++])
@@ -30,9 +30,9 @@ char *argstostr(int ac, char **av)
 	if (str == NULL)
 		return (NULL);
 
-	for (i = 0, j = 0; i < ac && j < len; i++)
+	for (m = 0, j = 0; m < ac && j < len; m++)
 	{
-		s = av[i];
+		s = av[m];
 		k = 0;
 
 		while (s[k])
