@@ -6,7 +6,7 @@
  * code by sue
  * @size:size of the array
  * @c: initial value
- * 
+ *
  * Return: pointer to the array, NULL if it fails
  */
 char *create_array(unsigned int size, char c)
