@@ -5,33 +5,33 @@ void util(char **, char *);
 void create_word(char **, char *, int, int, int);
 
 /**
- * strtow - splits a string into words.
+ * strtow -this splits 1 string in 2 words.
  * @str: the string
- *
- * Return: returns a pointer to an array of strings (words)
+ * code by sue
+ * Return: returns  pointer to array of strings
  */
 char **strtow(char *str)
 {
-	int i, flag, len;
+	int i, sue, len;
 	char **words;
 
 	if (str == NULL || str[0] == '\0' || (str[0] == ' ' && str[1] == '\0'))
 		return (NULL);
 
-	i = flag = len = 0;
+	i = sue = len = 0;
 	while (str[i])
 	{
-		if (flag == 0 && str[i] != ' ')
-			flag = 1;
+		if (sue == 0 && str[i] != ' ')
+			sue = 1;
 		if (i > 0 && str[i] == ' ' && str[i - 1] != ' ')
 		{
-			flag = 0;
+			sue = 0;
 			len++;
 		}
 		i++;
 	}
 
-	len += flag == 1 ? 1 : 0;
+	len += sue == 1 ? 1 : 0;
 	if (len == 0)
 		return (NULL);
 
@@ -45,34 +45,34 @@ char **strtow(char *str)
 }
 
 /**
- * util - a util function for fetching words into an array
- * @words: the strings array
- * @str: the string
+ * util - a function for fetching the words into an array
+ * @words: strings array
+ * @str: string
  */
 void util(char **words, char *str)
 {
-	int i, j, start, flag;
+	int i, j, start, suzzy;
 
-	i = j = flag = 0;
+	i = j = suzzy = 0;
 	while (str[i])
 	{
-		if (flag == 0 && str[i] != ' ')
+		if (suzzy == 0 && str[i] != ' ')
 		{
 			start = i;
-			flag = 1;
+			suzzy = 1;
 		}
 
 		if (i > 0 && str[i] == ' ' && str[i - 1] != ' ')
 		{
 			create_word(words, str, start, i, j);
 			j++;
-			flag = 0;
+			suzzy = 0;
 		}
 
 		i++;
 	}
 
-	if (flag == 1)
+	if (suzzy == 1)
 		create_word(words, str, start, i, j);
 }
 
