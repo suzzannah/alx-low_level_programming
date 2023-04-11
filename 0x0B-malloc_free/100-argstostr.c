@@ -2,16 +2,16 @@
 #include <stdlib.h>
 
 /**
- * argstostr -this concatenates all program arguments.
- * @ac:the  arguments count
- * @av:the  arguments vector
- * code by sue
+ * argstostr - concatenates all the arguments of your program.
+ * @ac: arguments count
+ * @av: arguments vector
+ *
  * Return: a pointer to a new string, or NULL if it fails
  */
 char *argstostr(int ac, char **av)
 {
 	char *str, *s;
-	int i, j, a, len = 0;
+	int i, j, k, len = 0;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
@@ -35,10 +35,10 @@ char *argstostr(int ac, char **av)
 		s = av[i];
 		k = 0;
 
-		while (s[a])
+		while (s[k])
 		{
-			str[j] = s[a];
-			a++;
+			str[j] = s[k];
+			k++;
 			j++;
 		}
 		str[j++] = '\n';
