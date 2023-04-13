@@ -26,23 +26,23 @@ void _print(char *str, int l)
 }
 
 /**
- * mul - multiplies a char with a string and places the answer into dest
- * @n: char to multiply
- * @num: string to multiply
- * @num_index: last non NULL index of num
- * @dest: destination of multiplication
+ * mul - this multiplies a char with a string
+ * @n:the  char to multiply
+ * @num: the string to multiply
+ * @num_index:the last non NULL index of number
+ * @dest: the dest of multiplication
  * @dest_index: highest index to start addition
- *
+ * code by sue
  * Return: pointer to dest, or NULL on failure
  */
 char *mul(char n, char *num, int num_index, char *dest, int dest_index)
 {
-	int j, k, mul, mulrem, add, addrem;
+	int x, k, mul, mulrem, add, addrem;
 
 	mulrem = addrem = 0;
-	for (j = num_index, k = dest_index; j >= 0; j--, k--)
+	for (x = num_index, k = dest_index; x >= 0; x--, k--)
 	{
-		mul = (n - '0') * (num[j] - '0') + mulrem;
+		mul = (n - '0') * (num[x] - '0') + mulrem;
 		mulrem = mul / 10;
 		add = (dest[k] - '0') + (mul % 10) + addrem;
 		addrem = add / 10;
